@@ -1,5 +1,4 @@
-from django.urls import path, include
-from django.views.generic import TemplateView
+from django.urls import path
 
 from product.views.product import CreateProductView, ListProductView
 from product.views.variant import VariantView, VariantCreateView, VariantEditView
@@ -15,7 +14,5 @@ urlpatterns = [
     # Products URLs
     path('create/', CreateProductView.as_view(), name='create.product'),
     path('list/', ListProductView, name='list.product'),
-    # path('list/', TemplateView.as_view(template_name='products/list.html', extra_context={
-    #     'product': True
-    # }), name='list.product'),
+
 ]
